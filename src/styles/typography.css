@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root {
+  --sans: 'DM Sans', sans-serif;
+  --serif: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+.display {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0;
+}
