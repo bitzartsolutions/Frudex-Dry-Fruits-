@@ -1,6 +1,22 @@
-.exact-hero::before,
-.products-hero::before,
-.contact-hero::before,
+.exact-hero-linework,
+.about-hero-curves {
+  height: 100%;
+  inset: 0;
+  opacity: .2;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero-linework-dash {
+  animation: hero-linework-flow 2.4s linear infinite;
+}
+
+@keyframes hero-linework-flow {
+  to { stroke-dashoffset: -24; }
+}
+
 .quality-hero::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 600' preserveAspectRatio='none'%3E%3Cpath d='M-100 450 C 300 200, 700 600, 1100 320 C 1300 180, 1500 390, 1600 300' fill='none' stroke='%2350CD65' stroke-dasharray='6 6' stroke-width='1.2'/%3E%3Cpath d='M-100 350 C 250 150, 650 500, 1050 250 C 1280 120, 1450 330, 1600 250' fill='none' stroke='%239EFFAD' stroke-width='.8'/%3E%3Ccircle cx='1050' cy='250' r='3' fill='%239EFFAD'/%3E%3Ccircle cx='700' cy='600' r='2' fill='%2350CD65'/%3E%3C/svg%3E");
   background-position: center;
@@ -13,10 +29,16 @@
   z-index: 0;
 }
 
-.exact-hero > *,
-.products-hero > *,
-.contact-hero > *,
+.exact-hero > *:not(.exact-hero-linework),
+.products-hero > *:not(.exact-hero-linework),
+.contact-hero > *:not(.exact-hero-linework),
 .quality-hero > *:not(.quality-hero-lines) {
   position: relative;
   z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-linework-dash {
+    animation: none;
+  }
 }

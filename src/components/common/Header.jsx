@@ -31,9 +31,9 @@ export default function Header() {
             {item.label}
           </NavLink>
         ))}
-        <NavLink className="header-cta mobile-menu-cta" to="/contact" onClick={() => setIsOpen(false)}>Get in Touch</NavLink>
+        <NavLink className="header-cta mobile-menu-cta" to="/contact#inquiry" onClick={() => setIsOpen(false)}>Get in Touch</NavLink>
       </nav>
-      <NavLink className="header-cta" to="/contact">Get in Touch </NavLink>
+      <NavLink className="header-cta" to="/contact#inquiry">Get in Touch </NavLink>
     </header>
   );
 }
