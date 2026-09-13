@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="footer-reference-links">
           <div><p className="footer-label">Product categories</p><div className="footer-category-grid">{footerProductCategories.map(({ label, slug }) => <Link key={slug} to={`/products/${slug}`}>{label}</Link>)}</div></div>
           {footerColumns.map((column) => <div key={column.title}><p className="footer-label">{column.title}</p>{column.links.map((link) => (link.to ? <Link key={link.label} to={link.to}>{link.label}</Link> : <a href={link.href} key={link.label} rel="noreferrer" target="_blank">{link.label}</a>))}</div>)}
-          <div><p className="footer-label">Headquarters</p><p className="footer-address">Koduvally Kattangal Mavoor Road<br />Koduvally 673601<br />Kerala, India<br /><a href="tel:+918129555591">+91 81295 55591</a></p></div>
+          <div><p className="footer-label">Headquarters</p><p className="footer-address">Koduvally Kattangal Mavoor Road<br />Koduvally 673572<br />Kerala, India<br /><a href="tel:+918129555591">+91 81295 55591</a></p></div>
         </div>
       </div>
       <div className="footer-bottom"><span>© 2025 FRUDEX FMCG International. All global distribution rights reserved.</span><span>Privacy statement &nbsp; Terms of trade &nbsp; Global compliance</span></div>
